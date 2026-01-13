@@ -22,14 +22,21 @@ const Header = () => {
             className="h-10 w-auto object-contain"
           />
         </Link>
-        <div>
+        <div className="flex items-center space-x-2">
           <SignedOut>
             <SignInButton>
               <Button variant="secondary">Sign In</Button>
             </SignInButton>
           </SignedOut>
           <SignedIn>
-            <UserButton />
+            <UserButton
+              appearance={{
+                elements: {
+                  avatarBox: "w-20 h-20",
+                  userButtonPopoverCard: "shadow-xl",
+                },
+              }}
+            />
           </SignedIn>
         </div>
       </nav>
